@@ -20,13 +20,17 @@ products OBJECT IDENTIFIER ::= { eaton 6  }
 pduAgent OBJECT IDENTIFIER ::= { products 6  }
 
 eatonEpdu MODULE-IDENTITY
-	LAST-UPDATED "201805301500Z"
+	LAST-UPDATED "201907121500Z"
 	ORGANIZATION 
 		"Eaton Corporation"
 	CONTACT-INFO 
 		"www.eaton.com/epdu"
 	DESCRIPTION 
 		"The MIB module for Eaton ePDUs (Enclosure Power Distribution Units)."
+
+	REVISION "201907121500Z"
+	DESCRIPTION 
+		"- Add a new outlet type sdg400 (32)."
 
 	REVISION "201805301500Z"
 	DESCRIPTION 
@@ -2058,7 +2062,8 @@ outletType  OBJECT-TYPE
 		nemaL630 (28),
     nemaL715 (29),
     rf203p277 (30),
-       sdg300 (31)
+       sdg300 (31),
+       sdg400 (32)
 	}
 	MAX-ACCESS read-only
 	STATUS     current
